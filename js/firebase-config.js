@@ -1,11 +1,14 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+/**
+ * firebase-config.js
+ * -------------------------------------------------------
+ * REPLACE the values below with your own Firebase project's
+ * web app config. See README.md -> "Firebase Setup" for the
+ * exact step-by-step instructions (it's free, takes ~3 minutes).
+ *
+ * Project Settings -> General -> Your apps -> SDK setup and
+ * configuration -> "Config"
+ * -------------------------------------------------------
+ */
 const firebaseConfig = {
   apiKey: "AIzaSyC9o_1yc-noQyqaNXuQyUr_60WctrjYcxo",
   authDomain: "ludo-live-5a89f.firebaseapp.com",
@@ -17,6 +20,5 @@ const firebaseConfig = {
   measurementId: "G-HDC2L45GPP"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
