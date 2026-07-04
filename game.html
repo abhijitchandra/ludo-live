@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ludo Online — Playing</title>
+<link rel="stylesheet" href="css/styles.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎲</text></svg>">
+</head>
+<body>
+  <div class="game-wrap">
+    <div class="topbar">
+      <div class="room-badge">
+        Room <b id="roomCodeLabel">-----</b>
+        <button class="copy-link" id="copyLinkBtn">copy invite link</button>
+      </div>
+      <button class="btn btn-secondary" id="leaveBtn" style="width:auto;padding:8px 14px;">Leave</button>
+    </div>
+
+    <div class="status-line" id="statusLine">Connecting…</div>
+
+    <div class="play-area">
+      <div class="player-panels">
+        <div class="player-panel" id="panel-red">
+          <div class="player-name-row"><span class="color-dot red"></span><span id="name-red">Waiting…</span></div>
+          <div class="player-meta">Red</div>
+          <div class="token-progress" id="progress-red"></div>
+        </div>
+        <div class="dice-wrap">
+          <div class="dice-box" id="diceBox">
+            <svg viewBox="0 0 100 100" class="dice-svg" id="diceSvg"></svg>
+          </div>
+          <div class="dice-hint" id="diceHint">Waiting for players…</div>
+        </div>
+        <div class="player-panel" id="panel-yellow">
+          <div class="player-name-row"><span class="color-dot yellow"></span><span id="name-yellow">Waiting…</span></div>
+          <div class="player-meta">Yellow</div>
+          <div class="token-progress" id="progress-yellow"></div>
+        </div>
+      </div>
+
+      <div class="board-outer">
+        <div class="ludo-board" id="board"></div>
+      </div>
+    </div>
+
+    <div class="log-line" id="logLine"></div>
+  </div>
+
+  <div class="winner-overlay" id="winnerOverlay">
+    <div class="winner-card">
+      <h2 id="winnerTitle">🎉 Winner!</h2>
+      <p id="winnerSubtitle"></p>
+      <button class="btn btn-primary" id="playAgainBtn" style="width:auto;padding:12px 24px;">Back to Lobby</button>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/boardPath.js"></script>
+  <script src="js/gameEngine.js"></script>
+  <script src="js/roomClient.js"></script>
+  <script src="js/boardRenderer.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
