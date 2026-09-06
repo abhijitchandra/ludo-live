@@ -10,7 +10,7 @@
  * -------------------------------------------------------
  */
 const firebaseConfig = {
-  apiKey: "AIzaSyC9o_1yc-noQyqaNXuQyUr_60WctrjYcxo",
+  apiKey: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
   authDomain: "ludo-live-5a89f.firebaseapp.com",
   databaseURL: "https://ludo-live-5a89f-default-rtdb.firebaseio.com",
   projectId: "ludo-live-5a89f",
